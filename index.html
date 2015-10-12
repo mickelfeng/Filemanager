@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Filemanager by simogeo</title>
+    <meta name="description" content="Filemanager : An open-source file manager released under MIT license. Up-to-date for PHP and MVC connector. For an online demo, see URL below">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Filemanager</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Filemanager</h1>
-          <h2>An open-source file manager released under MIT license. Up-to-date for PHP and MVC connector.</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mickelfeng/Filemanager">View on GitHub</a>
+
+          <h1 id="project_title">Filemanager</h1>
+          <h2 id="project_tagline">An open-source file manager released under MIT license. Up-to-date for PHP and MVC connector. For an online demo, see URL below</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mickelfeng/Filemanager/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mickelfeng/Filemanager/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/simogeo/Filemanager/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/simogeo/Filemanager/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/simogeo/Filemanager" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-        <h2>Have a look now! </h2>
-        <p><a href="http://fm.linea21.com">Try the online demo</a>.</p>
-        
-          <h2>
-<a name="main-features" class="anchor" href="#main-features"><span class="octicon octicon-link"></span></a>Main features</h2>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="main-features" class="anchor" href="#main-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main features</h2>
 
 <ul>
 <li>A Filemanager relying on jquery.</li>
@@ -65,12 +62,8 @@
 <li>and more ...</li>
 </ul>
 
-<h2>Documentation</h2>
-
-<p><a href="https://github.com/simogeo/Filemanager/wiki">Our wiki</a> is well-documented. Please, have a look on it before asking for support here.</p>
-
 <h2>
-<a name="installation-and-setup" class="anchor" href="#installation-and-setup"><span class="octicon octicon-link"></span></a>Installation and Setup</h2>
+<a id="installation-and-setup" class="anchor" href="#installation-and-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation and Setup</h2>
 
 <p><strong>Preamble</strong></p>
 
@@ -81,7 +74,9 @@
 
 <p>A JSP/Java connector implementation is available at : <a href="https://github.com/th-schwarz/C5Connector.Java">https://github.com/th-schwarz/C5Connector.Java</a> </p>
 
-<hr><p><strong>(1)</strong> Check out a copy of the FileManager from the repository using Git :</p>
+<hr>
+
+<p><strong>(1)</strong> Check out a copy of the FileManager from the repository using Git :</p>
 
 <p>git clone <a href="http://github.com/simogeo/Filemanager.git">http://github.com/simogeo/Filemanager.git</a></p>
 
@@ -94,23 +89,20 @@
 
 <p><strong>(3a)</strong> If you are integrating the FileManager with FCKEditor, open your fckconfig.js file and find the lines which specify what file browser to use for images, links, etc. Look toward the bottom of the file. You will need to change lines such as this:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">FCKConfig</span><span class="p">.</span><span class="nx">ImageBrowser</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">;</span>
-<span class="nx">FCKConfig</span><span class="p">.</span><span class="nx">ImageBrowserURL</span> <span class="o">=</span> <span class="nx">FCKConfig</span><span class="p">.</span><span class="nx">BasePath</span> <span class="o">+</span> <span class="s1">'filemanager/browser/default/browser.html?Type=Image&amp;Connector=../../connectors/'</span> <span class="o">+</span> <span class="nx">_FileBrowserLanguage</span> <span class="o">+</span> <span class="s1">'/connector.'</span> <span class="o">+</span> <span class="nx">_FileBrowserExtension</span> <span class="p">;</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre>FCKConfig.ImageBrowser <span class="pl-k">=</span> <span class="pl-c1">false</span> ;
+FCKConfig.ImageBrowserURL <span class="pl-k">=</span> FCKConfig.BasePath <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>filemanager/browser/default/browser.html?Type=Image&amp;Connector=../../connectors/<span class="pl-pds">'</span></span> <span class="pl-k">+</span> _FileBrowserLanguage <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>/connector.<span class="pl-pds">'</span></span> <span class="pl-k">+</span> _FileBrowserExtension ;</pre></div>
 
 <p>...to this:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">FCKConfig</span><span class="p">.</span><span class="nx">ImageBrowser</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">;</span>
-<span class="nx">FCKConfig</span><span class="p">.</span><span class="nx">ImageBrowserURL</span> <span class="o">=</span> <span class="s1">'[Path to Filemanager]/index.html'</span> <span class="p">;</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre>FCKConfig.ImageBrowser <span class="pl-k">=</span> <span class="pl-c1">true</span> ;
+FCKConfig.ImageBrowserURL <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>[Path to Filemanager]/index.html<span class="pl-pds">'</span></span> ;</pre></div>
 
 <p><strong>(3b)</strong> If you are integrating the FileManager with CKEditor 3.x or higher, simply set the URL when you configure your instance, like so:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">CKEDITOR</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">'instancename'</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">filebrowserBrowseUrl</span><span class="o">:</span> <span class="s1">'[Path to Filemanager]/index.html'</span><span class="p">,</span>
-    <span class="p">...</span><span class="nx">other</span> <span class="nx">configuration</span> <span class="nx">options</span><span class="p">...</span>
-<span class="p">});</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">CKEDITOR</span>.<span class="pl-c1">replace</span>(<span class="pl-s"><span class="pl-pds">'</span>instancename<span class="pl-pds">'</span></span>, {
+    filebrowserBrowseUrl<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>[Path to Filemanager]/index.html<span class="pl-pds">'</span></span>,
+    ...other configuration options...
+});</pre></div>
 
 <p>If you want to use the <strong>modal dialog mode</strong> (instead of pop-up), please refer to <a href="https://github.com/simogeo/Filemanager/wiki/How-to-open-the-Filemanager-from-CKEditor-in-a-modal-window-%3F">the dedicated wiki page</a>.</p>
 
@@ -134,16 +126,16 @@ If, for any reason, you can't use the embedded jQuery version just now that the 
 You'll have to use the <a href="https://github.com/jquery/jquery-migrate">jQuery.migrate() plugin</a> to use it with jQuery version 1.9+.</p>
 
 <h2>
-<a name="set-up--security" class="anchor" href="#set-up--security"><span class="octicon octicon-link"></span></a>Set-up &amp; security</h2>
+<a id="set-up--security" class="anchor" href="#set-up--security" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set-up &amp; security</h2>
 
 <p><strong>Important</strong> : The Filemanager is designed to work without any special configuration but <strong>using it without any configuration is VERY unsafe</strong>.
 Please set-up your own <strong>authentication function</strong>, based on <a href="https://github.com/simogeo/Filemanager/blob/master/connectors/php/default.config.php">default file</a> and refering to the <a href="https://github.com/simogeo/Filemanager/wiki/Security-concern">dedicated wiki page</a>.</p>
 
 <h2>
-<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
 
 <h2>
-<a name="connector-location" class="anchor" href="#connector-location"><span class="octicon octicon-link"></span></a>Connector Location</h2>
+<a id="connector-location" class="anchor" href="#connector-location" aria-hidden="true"><span class="octicon octicon-link"></span></a>Connector Location</h2>
 
 <p>You can create a connector for your server side language of choice by following this simple API. You must have a script at the following location which can respond to HTTP GET requests by returning an appropriate JSON object:</p>
 
@@ -165,7 +157,7 @@ CFM: .../connectors/cfm/filemanager.cfm
 <p>As long as a script exists at this location to respond to requests, you may split up the code (external libraries, configuration files, etc.) however you see fit.</p>
 
 <h2>
-<a name="error-handling" class="anchor" href="#error-handling"><span class="octicon octicon-link"></span></a>Error Handling</h2>
+<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling</h2>
 
 <p>Every response should include two keys specific to error handling: Error, and Code. If an error occurs in your script, you may populate these keys with whatever values you feel are most appropriate. If there is no error, Error should remain empty or null, and Code should be empty, null, or zero (0). Do not use zero for any actual errors. The following example would be an appropriate response if the connector uses an external file for configuration (recommended), but that file cannot be found:</p>
 
@@ -176,12 +168,12 @@ CFM: .../connectors/cfm/filemanager.cfm
 </code></pre>
 
 <h2>
-<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h2>
 
 <p>Your script should include support for the following methods/functions. GET requests from FileManager include a parameter "mode" which will indicate which type of response to return. Additional parameters will provide other information required to fulfill the request, such as the current directory.</p>
 
 <h2>
-<a name="getinfo" class="anchor" href="#getinfo"><span class="octicon octicon-link"></span></a>getinfo</h2>
+<a id="getinfo" class="anchor" href="#getinfo" aria-hidden="true"><span class="octicon octicon-link"></span></a>getinfo</h2>
 
 <p>The <code>getinfo</code> method returns information about a single file. Requests with mode "getinfo" will include an additional parameter, "path", indicating which file to inspect. A boolean parameter "getsize" indicates whether the dimensions of the file (if an image) should be returned. </p>
 
@@ -240,7 +232,7 @@ Code: An error code, or 0 if there was no error.
 </code></pre>
 
 <h2>
-<a name="getfolder" class="anchor" href="#getfolder"><span class="octicon octicon-link"></span></a>getfolder</h2>
+<a id="getfolder" class="anchor" href="#getfolder" aria-hidden="true"><span class="octicon octicon-link"></span></a>getfolder</h2>
 
 <p>The <code>getfolder</code> method returns an array of file and folder objects representing the contents of the given directory (indicated by a "path" parameter). It should call the getinfo method to retrieve the properties of each file. A boolean parameter "getsizes" indicates whether image dimensions should be returned for each item. Folders should always be returned before files.
 Optionally a "type" parameter can be specified to restrict returned files (depending on the connector). If a "type" parameter is given for the main index.html URL, the same parameter value is reused and passed to getfolder. This can be used for example to only show image files in a file system tree.</p>
@@ -307,7 +299,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 <p>Each key in the array is the path to an individual item, and the value is the file object for that item.</p>
 
 <h2>
-<a name="rename" class="anchor" href="#rename"><span class="octicon octicon-link"></span></a>rename</h2>
+<a id="rename" class="anchor" href="#rename" aria-hidden="true"><span class="octicon octicon-link"></span></a>rename</h2>
 
 <p>The <code>rename</code> method renames the item at the path given in the "old" parameter with the name given in the "new" parameter and returns an object indicating the results of that action.</p>
 
@@ -329,7 +321,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="move" class="anchor" href="#move"><span class="octicon octicon-link"></span></a>move</h2>
+<a id="move" class="anchor" href="#move" aria-hidden="true"><span class="octicon octicon-link"></span></a>move</h2>
 
 <p>The <code>move</code> method move "old" file or directory to specified "new" directory. It is possible to specify absolute path from fileRoot dir or relative path from "old" item. "root" value is mandatory to secure that relative paths don't get above fileRoot.
 <strong>The <code>move</code> method is not 100 % safe. We give you the advice to wait for a security update to use it.</strong></p>
@@ -369,7 +361,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="delete" class="anchor" href="#delete"><span class="octicon octicon-link"></span></a>delete</h2>
+<a id="delete" class="anchor" href="#delete" aria-hidden="true"><span class="octicon octicon-link"></span></a>delete</h2>
 
 <p>The <code>delete</code> method deletes the item at the given path.</p>
 
@@ -388,7 +380,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="add" class="anchor" href="#add"><span class="octicon octicon-link"></span></a>add</h2>
+<a id="add" class="anchor" href="#add" aria-hidden="true"><span class="octicon octicon-link"></span></a>add</h2>
 
 <p>The <code>add</code> method adds the uploaded file to the specified path. Unlike the other methods, this method must return its JSON response wrapped in an HTML , so the MIME type of the response is text/html instead of text/plain. The upload form in the File Manager passes the current path as a POST param along with the uploaded file. The response includes the path as well as the name used to store the file. The uploaded file's name should be safe to use as a path component in a URL, so URL-encoded at a minimum.</p>
 
@@ -403,7 +395,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="replace" class="anchor" href="#replace"><span class="octicon octicon-link"></span></a>replace</h2>
+<a id="replace" class="anchor" href="#replace" aria-hidden="true"><span class="octicon octicon-link"></span></a>replace</h2>
 
 <p>The <code>replace</code> method allow the user to replace a specific file whatever the new filename - at least, the new file should have the same extension the original has. The old file is automatically overwritten. Unlike the other methods, this method must return its JSON response wrapped in an HTML , so the MIME type of the response is text/html instead of text/plain. The <em>dynamic</em> upload form in the File Manager passes the current file path as a POST param along with the uploaded file. The response includes the path as well as the name used to store the file.</p>
 
@@ -418,7 +410,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="editfile" class="anchor" href="#editfile"><span class="octicon octicon-link"></span></a>editfile</h2>
+<a id="editfile" class="anchor" href="#editfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>editfile</h2>
 
 <p>The <code>editfile</code> method returns the content of a given file (passed as parameter). It gives the user the ability to edit a file online (extensions are specified in configuration file). Handled as GET request.</p>
 
@@ -438,7 +430,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="savefile" class="anchor" href="#savefile"><span class="octicon octicon-link"></span></a>savefile</h2>
+<a id="savefile" class="anchor" href="#savefile" aria-hidden="true"><span class="octicon octicon-link"></span></a>savefile</h2>
 
 <p>The <code>save</code> method will overwrite the content of the current file. The edit form in the File Manager passes the mode (as <code>savefile</code>), path of the current file and the content as POST parameters.</p>
 
@@ -452,7 +444,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="preview" class="anchor" href="#preview"><span class="octicon octicon-link"></span></a>preview</h2>
+<a id="preview" class="anchor" href="#preview" aria-hidden="true"><span class="octicon octicon-link"></span></a>preview</h2>
 
 <p>The <code>preview</code> method serves the requested image for displaying. The image path is passed through the <code>path</code> parameter. If <code>thumbnail=true</code> parameter is passed, the method will return an image thumbnail. An extra parameter such as UNIX time can be added to the URL to prevent cache issue.</p>
 
@@ -462,7 +454,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="addfolder" class="anchor" href="#addfolder"><span class="octicon octicon-link"></span></a>addfolder</h2>
+<a id="addfolder" class="anchor" href="#addfolder" aria-hidden="true"><span class="octicon octicon-link"></span></a>addfolder</h2>
 
 <p>The <code>addfolder</code> method creates a new directory on the server within the given path.</p>
 
@@ -482,7 +474,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>download</h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>download</h2>
 
 <p>The <code>download</code> method serves the requested file to the user. We currently use a MIME type of "application/x-download" to force the file to be downloaded rather than displayed in a browser. In the future we may make exceptions for specific file types that often have in-browser viewers such as PDF's and various movie formats (Flash, Quicktime, etc.).</p>
 
@@ -492,7 +484,7 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 </code></pre>
 
 <h2>
-<a name="mit-license" class="anchor" href="#mit-license"><span class="octicon octicon-link"></span></a>MIT LICENSE</h2>
+<a id="mit-license" class="anchor" href="#mit-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>MIT LICENSE</h2>
 
 <p>Copyright (c) 2011-2013 Jason Huck, Simon Georget
 <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a></p>
@@ -502,15 +494,18 @@ Optionally a "type" parameter can be specified to restrict returned files (depen
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-        </section>
-
-        <footer>
-          Filemanager is maintained by <a href="https://github.com/simogeo">simogeo</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Filemanager maintained by <a href="https://github.com/mickelfeng">mickelfeng</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
